@@ -1,6 +1,12 @@
 plugins {
-    alias(libs.plugins.android.application)
-    alias(libs.plugins.jetbrains.kotlin.android)
+    kotlin("kapt")
+    alias(libs.plugins.com.android.application)
+    alias(libs.plugins.org.jetbrains.kotlin.android)
+    alias(libs.plugins.com.google.devtools.kts)
+    alias(libs.plugins.com.google.dagger.hilt.android)
+    alias(libs.plugins.navigation.safeargs)
+    alias(libs.plugins.firebaseCrashlytics)
+    alias(libs.plugins.compose.compiler)
 }
 
 android {
@@ -37,12 +43,50 @@ android {
 
 dependencies {
 
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
+    implementation(libs.core.ktx)
+    implementation(libs.appcompat)
     implementation(libs.material)
-    implementation(libs.androidx.activity)
-    implementation(libs.androidx.constraintlayout)
+    implementation(libs.constraintlayout)
+    implementation(libs.hilt)
+    implementation(libs.hilt.navigation.compose)
+    implementation(libs.coroutines)
+    implementation(libs.navigationFragment)
+    implementation(libs.navigationUi)
+    implementation(libs.navigation.compose)
+    implementation(libs.viewmodel)
+    implementation(libs.livedata)
+    implementation(libs.lifecycle)
+    implementation(libs.savedsatateViewmodel)
+
+    implementation(platform(libs.compose.bom))
+    implementation(libs.compose.viewmodel)
+    implementation(libs.compose.runtime)
+    implementation(libs.compose.runtime.livedata)
+    implementation(libs.compose.foundation)
+    implementation(libs.compose.foundation)
+    implementation(libs.compose.animation)
+    implementation(libs.compose.material)
+    implementation(libs.compose.material3)
+    implementation(libs.compose.material3.window)
+    implementation(libs.compose.ui)
+    implementation(libs.androidx.activity.compose)
+    implementation(libs.compose.ui.graphics)
+    implementation(libs.compose.ui.tooling.preview)
+
+    implementation(libs.lottie)
+    implementation(libs.coil)
+    implementation(libs.androidx.profileinstaller)
+
+    implementation(libs.timber)
+    debugImplementation(libs.compose.ui.tooling)
+    debugImplementation(libs.compose.ui.test.manifest)
+
+    ksp(libs.hiltCompiler)
+    kapt(libs.lifecycleCompiler)
+
     testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
+    androidTestImplementation(platform(libs.compose.bom))
+    androidTestImplementation(libs.compose.ui.test.junit4)
+    androidTestImplementation(libs.androidx.test.ext.junit)
+    androidTestImplementation(libs.espresso.core)
 }
