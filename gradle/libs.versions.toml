@@ -1,5 +1,5 @@
 [versions]
-agp = "8.4.1"
+agp = "8.5.0"
 org-jetbrains-kotlin-android = "2.0.0"
 core-ktx = "1.13.1"
 junit = "4.13.2"
@@ -25,7 +25,7 @@ composeBom = "2024.06.00"
 activityCompose = "1.9.0"
 
 firebase-bom = "33.1.0"
-gradle = "8.4.1"
+gradle = "8.5.0"
 googleServices = "4.4.2"
 firebaseCrashlyticsGradle = "3.0.1"
 uiautomator = "2.3.0"
