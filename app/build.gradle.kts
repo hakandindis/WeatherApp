@@ -10,6 +10,7 @@ plugins {
 }
 
 android {
+    buildToolsVersion = "34.0.0"
     namespace = "com.hakandindis.weatherapp"
     compileSdk = 34
 
@@ -36,12 +37,18 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+    buildFeatures {
+        buildConfig = true
+        compose = true
+    }
     kotlinOptions {
         jvmTarget = "1.8"
     }
 }
 
 dependencies {
+
+    implementation(project(":feature:widget"))
 
     implementation(libs.core.ktx)
     implementation(libs.appcompat)

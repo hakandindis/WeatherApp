@@ -21,4 +21,7 @@ dependencyResolutionManagement {
 
 rootProject.name = "WeatherApp"
 include(":app")
- 
+
+// feature modules
+include(":feature")
+include(":feature:widget")
