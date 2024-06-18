@@ -45,8 +45,6 @@ dependencies {
     implementation(libs.glance.appwidget)
     implementation(libs.glance.material)
 
-    implementation(libs.coil.compose)
-
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)
